@@ -14,15 +14,12 @@ use jojoe77777\FormAPI\SimpleForm;
 class Main extends PluginBase implements Listener{
 
 	public function onEnable() : void {
+		$this->getLogger()->info("Rules-Remake On Enable");
 		$this->registerCommands();
 		$this->Content = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		self::$instance = $this;
   }
-  
-  public function onEnable():bool{
-    $this->getLogger()->info("Rules-Remake On Enable");
-   
-  }
+
   public function onCommand (CommandSender $sender, Command $cmd, String $label, Array $args):boll{
     switch($cmd->getName()){
       case "rules":
