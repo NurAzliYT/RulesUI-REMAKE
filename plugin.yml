@@ -2,7 +2,7 @@ name: Rules-Remake
 main: NurAzliYT\Rules\Main
 api: 5.0.0
 version: 1.0.0
-authors: ["NurAzliYT, NurAzliYT, MauslaGames"]
+authors: ["NurAzliYT, NurAzli, MauslaGames"]
 description: "Rules Remake For Your Server"
 
 commands:
