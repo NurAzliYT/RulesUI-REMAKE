@@ -42,10 +42,10 @@ class Main extends PluginBase implements Listener{
         });
         $form->setTitle("RulesUI");
         $form->setContent("1. Edit config.yml on Your File Manager");
-        $form->setContent("2. Edit")
-        $form->setContent("3. Edit")
-        $form->setContent("4. Edit")
-        $form->setContent("5. Edit")
+        $form->setContent("2. Edit");
+        $form->setContent("3. Edit");
+        $form->setContent("4. Edit");
+        $form->setContent("5. Edit");
         $form->addButton("Ok");
         $form->addButton("Cancel");
         $form->sendToPlayer($sender);
