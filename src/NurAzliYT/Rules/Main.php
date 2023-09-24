@@ -14,13 +14,12 @@ use pocketmine\event\Listener;
 use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener{
-	public $Content;
+	public SetContent $setcontent;
 	public $instance;
 
-	public function onEnable() : bool {
-		$this->getLogger()->info("Rules-Remake On Enable");
+	public function onEnable() : void {
 		$this->getCommands("rules");
-		$this->Content = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+		$this->setcontent = new Config($this->getDataFolder() . "config.yml", Config::YAML);
 		self::$instance = $this;
   }
 
