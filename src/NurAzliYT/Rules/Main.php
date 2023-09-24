@@ -12,6 +12,7 @@ use pocketmine\event\Listener;
 use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener{
+	public Content $Content;
 
 	public function onEnable() : void {
 		$this->getLogger()->info("Rules-Remake On Enable");
