@@ -17,7 +17,7 @@ class Main extends PluginBase implements Listener{
 	public $Content;
 	public $instance;
 
-	public function onEnable() : void {
+	public function onEnable() : bool {
 		$this->getLogger()->info("Rules-Remake On Enable");
 		$this->getCommands("rules");
 		$this->Content = new Config($this->getDataFolder() . "config.yml", Config::YAML);
