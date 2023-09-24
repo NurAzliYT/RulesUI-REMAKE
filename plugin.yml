@@ -1,6 +1,15 @@
 name: Rules-Remake
-main: NurAzliYT\Rules\Rules-Remake
+main: NurAzliYT\Rules\Main
 api: 5.0.0
 version: 1.0.0
 authors: ["NurAzliYT, NurAzliYT, MauslaGames"]
 description: "Rules Remake For Your Server"
+
+commands:
+rules:
+permission: rulesui.command
+description: "Open Server Rules"
+
+permissions:
+rulesui.command:
+default: true
