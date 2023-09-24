@@ -34,6 +34,7 @@ class Main extends PluginBase implements Listener{
       }
       break;
     }
+  }
 
     public function openMyForm($sender){
         $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
