@@ -25,8 +25,31 @@ class Main extends PluginBase implements Listener{
       }
       break;
     }
-    return true;
+
     public function openMyForm($sender){
-      $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
-      $form = $api->createSimpleForm(function(Player $sender, int $data
-}
+        $api = $this->getServer()->getPluginManager()->getPlugin("FormAPI");
+        $form = $api->createSimpleForm(function(Player $sender, int $data = null) {
+            $result = $data;
+            if($result == null){
+                return true;
+            }
+            switch($result){
+                case 0:
+                    
+                break;    
+                
+            }
+        });
+        $form->setTitle("RulesUI");
+        $form->setContent("1. Edit config.yml on Your File Manager");
+        $form->setContent("2. Edit")
+        $form->setContent("3. Edit")
+        $form->setContent("4. Edit")
+        $form->setContent("5. Edit")
+        $form->addButton("Ok");
+        $form->addButton("Cancel");
+        $form->sendToPlayer($sender);
+        return $form;
+    } 
+}        
+        
