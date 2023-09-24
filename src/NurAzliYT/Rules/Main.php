@@ -3,6 +3,7 @@
 namespace NurAzliYT\Rules;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\utils\Config;
 use pocketmine\server\Server;
 use pocketmine\player\Player;
 use pocketmine\command\Command;
@@ -11,8 +12,16 @@ use pocketmine\event\Listener;
 use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener{
-  public function onEnable(){
+
+	public function onEnable() : void {
+		$this->registerCommands();
+		$this->Content = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+		self::$instance = $this;
+  }
+  
+  public function onEnable():bool{
     $this->getLogger()->info("Rules-Remake On Enable");
+   
   }
   public function onCommand (CommandSender $sender, Command $cmd, String $label, Array $args):boll{
     switch($cmd->getName()){
@@ -51,5 +60,8 @@ class Main extends PluginBase implements Listener{
         $form->sendToPlayer($sender);
         return $form;
     } 
+    public function onDisable() : void {
+		$this->Content->save();
+    }
 }        
         
