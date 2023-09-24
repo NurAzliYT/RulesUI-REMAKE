@@ -3,6 +3,7 @@
 namespace NurAzliYT\Rules;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\plugin\Plugin;
 use pocketmine\command\CommandExecutor;
 use pocketmine\utils\Config;
 use pocketmine\server\Server;
@@ -14,6 +15,7 @@ use jojoe77777\FormAPI\SimpleForm;
 
 class Main extends PluginBase implements Listener{
 	public $Content;
+	public $instance;
 
 	public function onEnable() : void {
 		$this->getLogger()->info("Rules-Remake On Enable");
