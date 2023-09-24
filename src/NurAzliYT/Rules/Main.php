@@ -3,6 +3,7 @@
 namespace NurAzliYT\Rules;
 
 use pocketmine\plugin\PluginBase;
+use pocketmine\command\CommandExecutor;
 use pocketmine\utils\Config;
 use pocketmine\server\Server;
 use pocketmine\player\Player;
